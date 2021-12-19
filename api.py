@@ -22,7 +22,7 @@ CATDICREF = {}  # Categorical Dictionary Reference
 DATASETSNROOT = []
 COLUMNNAMES = []
 DATA = []
-
+  
 datasets = []
 datasetFields = {}
 
