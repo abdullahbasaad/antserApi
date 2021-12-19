@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %} <h4>Data page</h4> {% endblock %}
+{% block content %} 
+<form action="data" method="post">
+    <p><input type="file" name="csvfile" value=""/>
+    <input type="submit" value="Show data"/></p>
+</form>
+{% endblock %}

@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <h2 style= color:blue>Variables Types</h2>
+   <table class="table table-hover">
+      {% for key, value in records.items() %}
+         <tr>
+              <th align="left"> {{ key }} </th>
+              <td> {{ value }} </td>
+         </tr>
+      {% endfor %}
+   </table>
+</div>
+
+<div class="container">
+  <h2 style= color:blue>Dataset Description</h2>
+   <table class="table table-hover">
+      {% for key, value in data_stat.items() %}
+      <tr>
+          <th align="left"> {{ key }} </th>
+                <td> {{value}} </td>
+      </tr>
+      {% endfor %}
+   </table>
+</div>
+
+<div class="container">
+  <h2 style= color:blue>Data Description - Categorical Variables</h2>
+   <table class="table table-hover">
+      {% for key, value in cat_stat.items() %}
+      <tr>
+          <th align="left"> {{ key }} </th>
+              {% for val in value %}
+              <td> {{val}} </td>
+              {% endfor %}
+      </tr>
+      {% endfor %}
+   </table>
+</div>
+
+<div class="container">
+  <h2 style= color:blue>Data Description - Object (String)</h2>
+   <table class="table table-hover">
+      {% for key, value in obj_stat.items() %}
+      <tr>
+          <th align="left"> {{ key }} </th>
+            {% for val in value %}
+          <td> {{val}} </td>
+          {% endfor %}
+      </tr>
+      {% endfor %}
+   </table>
+</div>
+
+<div class="container">
+  <h2 style= color:blue>Data Description - Numeric</h2>
+   <table class="table table-hover">
+      {% for key, value in num_stat.items() %}
+      <tr>
+          <th align="left"> {{ key }} </th>
+          {% for val in value %}
+          <td> {{val}} </td>
+          {% endfor %}
+      </tr>
+      {% endfor %}
+   </table>
+</div>
+
+</body>
+
+</html>
