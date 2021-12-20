@@ -4,6 +4,7 @@ import pandas as pd
 
 class DataStat:
 
+   # Method to collect dataset statistics
     def get_data_stat(df, file_name):
         try:
             skew = df.skew(axis=0, skipna=True, numeric_only=True).to_string().strip()
@@ -23,6 +24,7 @@ class DataStat:
                          'Groups: ' + str(df[k].dropna().unique())]}
         return CATDICREF
 
+    # Method to collect different object statistics
     def get_obj_stat(df, k):
         try:
             mostfreq = df[k].value_counts().idxmax()
@@ -38,6 +40,8 @@ class DataStat:
 
     # Method to collect different numeric statistics
     def get_num_stat(df, k):
+        global NUMDICREF
+        NUMDICREF = {}
         try:
             outliers = df[df[k] > df[k].mean() + 3 * df[k].std()]
             mostfreq = df[k].value_counts().idxmax()
@@ -60,5 +64,5 @@ class DataStat:
                             '75%: ' + str(df[k].quantile(0.75)),
                             'Outliers: ' + str(len(outliers))]}
         except ValueError:
-            print('Numaric data parsing error..')
+           print('Numaric data parsing error..')
         return NUMDICREF

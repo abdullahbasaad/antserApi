@@ -78,6 +78,8 @@ class Dataset(Resource):
                 global DF
                 DF = df
 
+                global DATDICREF, OBJDICREF, NUMDICREF, CATDICREF
+                
                 COLUMNDATATYPES.clear()
                 DATDICREF.clear()
                 OBJDICREF.clear()
