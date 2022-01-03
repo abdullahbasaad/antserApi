@@ -21,8 +21,8 @@ app.config['SECRET_KEY'] = 'Antser2022EDA-MicroserviceApplication'
 app.config['SQLALCHEMY_DATABASE_URI'] =  'postgresql://postgres:abd1234@192.168.0.208:5432/AntserApiDB'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['RECAPTCHA_USE_SSL'] = False
-app.config['RECAPTCHA_PUBLIC_KEY'] = '6LfZjswdAAAAAHpV_STAt1-45pvMQgOc_rNt_Zaf'
-app.config['RECAPTCHA_PRIVATE_KEY'] = '6LfZjswdAAAAAHrGBoFluXdeCWBgsaxBKOF5xj98'
+app.config['RECAPTCHA_PUBLIC_KEY'] = 'public-key'
+app.config['RECAPTCHA_PRIVATE_KEY'] = 'private-key'
 app.config['RECAPTCHA_OPTIONS'] = {'theme': 'white'}
 
 bootstrap = Bootstrap(app)
