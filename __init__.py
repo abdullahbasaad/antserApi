@@ -18,7 +18,7 @@ app = Flask(__name__)
 api = Api(app)
 
 app.config['SECRET_KEY'] = 'Should be secret!!!'
-app.config['SQLALCHEMY_DATABASE_URI'] =  'postgresql://postgres:pass@ip address/Data base name'
+app.config['SQLALCHEMY_DATABASE_URI'] =  'postgresql://postgres:pass@ip-address/Database name'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['RECAPTCHA_USE_SSL'] = False
 app.config['RECAPTCHA_PUBLIC_KEY'] = 'public-key'
