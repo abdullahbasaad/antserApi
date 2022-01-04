@@ -17,7 +17,7 @@ from update_setting import get_user_profile, get_setting, get_profile_setting
 app = Flask(__name__)
 api = Api(app)
 
-app.config['SECRET_KEY'] = 'Antser2022EDA-MicroserviceApplication'
+app.config['SECRET_KEY'] = 'Should be secret!!!'
 app.config['SQLALCHEMY_DATABASE_URI'] =  'postgresql://postgres:pass@ip address/Data base name'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['RECAPTCHA_USE_SSL'] = False
